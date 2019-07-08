@@ -26,15 +26,15 @@ public class ProductController {
 		
 		model.addAttribute("listProduct", list);
 		
-		return "list";
+		return "listProduct";
 	}
-	@RequestMapping("/add")
+	@RequestMapping("/addProduct")
 	public String addProduct(Model model) {
 		Product product = new Product();
 		
 		model.addAttribute("product",product);
 		
-		return "add";
+		return "addProduct";
 	}
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String save(@ModelAttribute Product product) {
